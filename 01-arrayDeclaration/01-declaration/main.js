@@ -1,0 +1,1 @@
+let arr = ['money', 'non', 'peakpoon', 'fon', 'john'];
