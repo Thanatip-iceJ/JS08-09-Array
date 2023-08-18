@@ -28,16 +28,20 @@ const array07 = [100, 200.25, 300.84, 400.3];
 const newArr07 = array07.map(x => x.toFixed(2))
 log(newArr07)
 
-// const array08 = [0, 5, 10, 7, 6, 5, 0];
-// const newArr08 = array08.map(x => {
-//     let date = new Date()
-//     date.setMonth(x - 1);
-//     console.log(date.setMonth(x - 1)) 
-// })
-// log(newArr08)
+const array08 = [0, 5, 10, 7, 6, 5, 0];
+const newArr08 = array08.map(x => {
+    let date = new Date(x)
+    date.setMonth(x)
+    return date.toLocaleString('en-Us', {month: 'short'});
+    // const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    // return x = month_names_short[x]
+})
+console.log(newArr08)
 
-// const array09 = [1, 16, 81, 256, 625, 1296];
-// const newArr09 = 
+const array09 = [1, 16, 81, 256, 625, 1296];
+// const newArr09 = array09.map(x => Math.sqrt(Math.sqrt(x)))
+const newArr09 = array09.map(x => x**(1/4))
+console.log(newArr09)
 
 const array10 = [
     { name: 'apple', age: 14 },
@@ -78,6 +82,13 @@ const newArr13 = array13.map(x => {
             today.getMonth() == birthDate.getMonth() && today.getDay() < birthDate.getDay())
     x.age = age;
     return x;
+
+  //   const newArr13 = array13.map(x => {
+  //     const newFruitObj = Object.assign({}, x);
+  //     const fullYear = +x.birth.slice(0,4)
+  //     newFruitObj.age = 2021 - fullYear;
+  //     return newFruitObj;
+  // })
 })
 
 log(newArr13)
@@ -98,7 +109,7 @@ const newArr14 = array14.map(x => {
 })
 
 log(newArr14)
-  
+
 
   
   

@@ -26,7 +26,7 @@ const array = [0, 5, 10, 7, 6, 5, 0];
 // result: ["Jan", "Jun", "Nov", "Aug", "Jul", "Jun", "Jan"]
 
 const array = [1, 16, 81, 256, 625, 1296];
-// result: [1, 2, 3, 4, 5, 6]
+// result: [1, 2, 3, 4, 5, 6] //
 
 const array = [
   { name: 'apple', age: 14 },

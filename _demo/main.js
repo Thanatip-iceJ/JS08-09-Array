@@ -63,3 +63,9 @@ const newArr = arr3.slice(0, 4)
 console.log(newArr)
 
 
+const array08 = [0, 5, 10, 7, 6, 5, 0];
+const newArr08 = array08.map(x => {
+   const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    return x = month_names_short[x]
+})
+
