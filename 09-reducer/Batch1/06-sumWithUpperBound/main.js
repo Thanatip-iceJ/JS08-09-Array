@@ -1,11 +1,12 @@
 let str = '31 45 12 67 34 86 23 37 19 41';
 
-const nums = str.split(' ');
-console.log(nums)
+const arr = str.split(' ')
+console.log(arr)
 
-const sum = nums.reduce((acc, x) => {
+const sum = arr.reduce((acc,x) => {
     if(+x < 40) acc += +x;
     return acc;
-},0)
+}, 0)
 
 console.log(sum)
+

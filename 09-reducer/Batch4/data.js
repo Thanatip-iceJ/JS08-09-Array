@@ -677,3 +677,38 @@ const sales = [
     type: 'Cash'
   }
 ];
+// #1
+const totalTransaction = sales.reduce((acc, x) => acc + x.product.unitPrice,0)
+console.log(totalTransaction)
+
+// #2
+const customers = sales.reduce((acc, x) => {
+    if(!acc[x.customer]) acc[x.customer] = 1
+    else acc[x.customer]++
+  return acc;
+},{})
+console.log(customers)
+
+// #3
+const salesAfterDiscount = sales.reduce((acc, x) => acc + x.product.unitPrice * (1 - x.discount || 0),0)
+console.log(salesAfterDiscount)
+
+// #4
+// acc = brands: xxx, salesByBrand: {{brandx: xx, total: xx}, {brandy: xx, total: xx}}
+const salesByBrand = {}
+let brandCount = 0
+const brandAndAmount = sales.reduce((acc, x) => {
+    if(!salesByBrand[x.product.name]) {
+      salesByBrand[x.product.name] = {count: 1, total: x.product.unitPrice}
+    }
+    else {
+      salesByBrand[x.product.name].count++;
+      salesByBrand[x.product.name].total += x.product.unitPrice
+    }
+    brandCount = Object.keys(salesByBrand).length
+    acc = {brandCount, salesByBrand}
+    return acc;
+},{})
+  console.log(brandCount)
+  console.log(brandAndAmount)
+  

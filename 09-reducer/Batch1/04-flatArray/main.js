@@ -4,13 +4,11 @@ let flattened = [
     [4, 5]
   ];
 
-// const newArr = flattened.reduce((acc,x) => [...acc , ...x] ,[])
-const newArr = flattened.reduce((acc,x) => {
-  for(let items of x) {
-    acc.push(items)
+const outside = flattened.reduce((acc, x) => {
+  for(let i of x) {
+    acc.push(i)
   }
   return acc;
 },[])
 
-
-console.log(newArr)
+console.log(outside)

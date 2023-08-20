@@ -1,13 +1,12 @@
 let alphabets = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd'];
 
-const result = alphabets.reduce((acc, char) => {
+const result = alphabets.reduce((acc, x, i) => {
     let found = false;
-    for(let x of acc) {
-        if(x == char) found = true;
+    for(let item of acc) {
+        if(x == item) found = true;
     }
-
-    if(!found) acc.push(char)
+    if(!found)acc.push(x)
     return acc;
-},[])
+}, [])
 
 console.log(result)
